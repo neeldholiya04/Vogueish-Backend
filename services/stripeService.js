@@ -220,7 +220,7 @@ class StripeService {
         .populate("products.product")
         .session(session);
       if (!order) {
-        throw new AppError("Order not found", 404);
+        throw new AppError("Order found", 404);
       }
 
       // Find the customer
